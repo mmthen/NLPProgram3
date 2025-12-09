@@ -52,18 +52,18 @@ def _predict_for_word(sent_list, word):
 
 
 def WSD_Test_director(list):
-    print("Predicting for 'director'")
+    #print("Predicting for 'director'")
     return _predict_for_word(list, "director")
 
 def WSD_Test_rubbish(list):
-    print("Predicting for 'rubbish'")
+    #print("Predicting for 'rubbish'")
     return _predict_for_word(list, "rubbish")
 
 def WSD_Test_overtime(list):
-    print("Predicting for 'overtime'") 
+    #print("Predicting for 'overtime'") 
     return _predict_for_word(list, "overtime")
 
-
+"""
 test_director = [
     "The managing director approved the changes.",     # sense 1
     "The film director started shooting the scene."     # sense 2
@@ -82,3 +82,4 @@ test_rubbish = [
 print(WSD_Test_director(test_director))
 print(WSD_Test_overtime(test_overtime))
 print(WSD_Test_rubbish(test_rubbish))
+"""
