@@ -40,24 +40,27 @@ def _predict_for_word(sent_list, word):
     
     vectorizer, clf = load_model(word)
 
-    # Apply same preprocessing used during training
+    #Preprocess input sentences
     processed = [preprocess(s, word) for s in sent_list]
 
-    # Use the scikit-learn pipeline to predict
+    #Vectorize and predict 
     X = vectorizer.transform(processed)
     preds = clf.predict(X)
 
-    # Make sure we return a list of plain Python ints
+    #Return list of python integers
     return [int(p) for p in preds]
 
 
 def WSD_Test_director(list):
+    print("Predicting for 'director'")
     return _predict_for_word(list, "director")
 
 def WSD_Test_rubbish(list):
+    print("Predicting for 'rubbish'")
     return _predict_for_word(list, "rubbish")
 
 def WSD_Test_overtime(list):
+    print("Predicting for 'overtime'") 
     return _predict_for_word(list, "overtime")
 
 
